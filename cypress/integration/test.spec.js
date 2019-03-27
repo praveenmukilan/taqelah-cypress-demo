@@ -8,7 +8,6 @@ describe('my first test', () => {
     })
 
     it('visit taqelah meetup', () => {
-
         cy.get('.gLFyf').type(data.input_taq)
         cy.contains("Google Search").click()
         cy.contains(/Meetup/).click()
