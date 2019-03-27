@@ -7,7 +7,7 @@ describe('my first test', () => {
         cy.visit('/')
     })
 
-    it('visit taqelah meetup', () => {
+    it.skip('visit taqelah meetup', function() {
         cy.get('.gLFyf').type(data.input_taq)
         cy.contains("Google Search").click()
         cy.contains(/Meetup/).click()
@@ -15,8 +15,8 @@ describe('my first test', () => {
     })
 
     it('visit carousell site', function() {
-        cy.get('.gLFyf').type('carousell')
-        cy.contains("Google Search").click()
+        cy.get('.gLFyf').type('carousell {ENTER}')
+        //cy.get('.sbl1').first().should('be.visible').click()
         cy.get('.LC20lb').first().should('contain','Snap to Sell').click()
         cy.url().should('eq','https://sg.carousell.com/')
     })
